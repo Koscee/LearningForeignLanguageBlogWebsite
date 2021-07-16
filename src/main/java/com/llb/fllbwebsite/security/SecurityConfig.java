@@ -72,8 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(USER_UPDATE_URL).authenticated()
                 .antMatchers(COMMENT_AND_LIKE_URLS).authenticated()
                 .antMatchers(
-                        "/",
-                        "/static/**",
+                        "/**",
                         "/favicon.ico",
                         "/**/*.png",
                         "/**/*.gif",
@@ -81,8 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.jpg",
                         "/**/*.html",
                         "/**/*.css",
-                        "/**/*.js",
-                        "/**/*.json"
+                        "/**/*.js"
                 ).permitAll()
                 .antMatchers(SIGN_UP_URL, SIGN_IN_URL, GET_USER_URL).permitAll()
                 .antMatchers(POST_URLS).permitAll()
